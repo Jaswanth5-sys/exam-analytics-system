@@ -1,0 +1,16 @@
+{
+  "name": "exam-analytics-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modern Online Quiz & Examination Analytics System powered by MonetDB",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "seed": "npm --prefix server run seed",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix server run build && npm --prefix client run build"
+  },
+  "keywords": ["quiz", "exam", "analytics", "monetdb", "react", "express", "tailwind", "recharts"],
+  "author": "",
+  "license": "ISC"
+}
