@@ -123,8 +123,8 @@ export const LoginPage: React.FC = () => {
                 className="p-2.5 rounded-xl border border-brand-200 bg-brand-50/50 hover:bg-brand-100/70 text-brand-800 transition text-center flex flex-col items-center justify-center group"
               >
                 <BookOpen className="w-4 h-4 mb-1 text-brand-600 group-hover:scale-110 transition" />
-                <span className="text-xs font-bold">Teacher</span>
-                <span className="text-[10px] text-brand-600/80">Prof. Turing</span>
+                <span className="text-xs font-bold">Faculty</span>
+                <span className="text-[9px] text-brand-600/80 truncate max-w-full">KARTHIKA NATARAJAN</span>
               </button>
 
               <button
@@ -134,7 +134,7 @@ export const LoginPage: React.FC = () => {
               >
                 <UserCheck className="w-4 h-4 mb-1 text-emerald-600 group-hover:scale-110 transition" />
                 <span className="text-xs font-bold">Student</span>
-                <span className="text-[10px] text-emerald-600/80">Alex Johnson</span>
+                <span className="text-[9px] text-emerald-600/80 truncate max-w-full">M.Jeswanth Sai Eswar</span>
               </button>
 
               <button

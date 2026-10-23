@@ -40,9 +40,9 @@ export async function seedDatabase() {
 
   const users = [
     { id: adminId, email: 'admin@exam.com', name: 'System Administrator', role: 'admin', pass: adminPass },
-    { id: teacher1Id, email: 'teacher@exam.com', name: 'Prof. Alan Turing', role: 'teacher', pass: teacherPass },
+    { id: teacher1Id, email: 'teacher@exam.com', name: 'KARTHIKA NATARAJAN', role: 'teacher', pass: teacherPass },
     { id: teacher2Id, email: 'teacher2@exam.com', name: 'Dr. Grace Hopper', role: 'teacher', pass: teacherPass },
-    { id: student1Id, email: 'student@exam.com', name: 'Alex Johnson', role: 'student', pass: studentPass },
+    { id: student1Id, email: 'student@exam.com', name: 'M.Jeswanth Sai Eswar', role: 'student', pass: studentPass },
     { id: student2Id, email: 'student2@exam.com', name: 'Sarah Connor', role: 'student', pass: studentPass },
     { id: student3Id, email: 'student3@exam.com', name: 'David Kim', role: 'student', pass: studentPass },
     { id: student4Id, email: 'student4@exam.com', name: 'Emma Watson', role: 'student', pass: studentPass },
@@ -510,8 +510,8 @@ export async function seedDatabase() {
   console.log('----------------------------------------------------');
   console.log('DEMO ACCOUNTS CREATED:');
   console.log('Admin:   admin@exam.com    / admin123');
-  console.log('Teacher: teacher@exam.com  / teacher123');
-  console.log('Student: student@exam.com  / student123 (Alex Johnson)');
+  console.log('Teacher: teacher@exam.com  / teacher123 (KARTHIKA NATARAJAN)');
+  console.log('Student: student@exam.com  / student123 (M.Jeswanth Sai Eswar)');
   console.log('----------------------------------------------------');
 }
 
