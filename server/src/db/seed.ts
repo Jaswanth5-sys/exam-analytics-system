@@ -62,12 +62,14 @@ export async function seedDatabase() {
   const cs201Id = uuidv4();
   const cs301Id = uuidv4();
   const math101Id = uuidv4();
+  const nosqlId = uuidv4();
 
   const subjects = [
     { id: cs101Id, code: 'CS101', name: 'Computer Science Fundamentals', description: 'Core principles of computing, architecture, and programming fundamentals.' },
     { id: cs201Id, code: 'CS201', name: 'Data Structures & Algorithms', description: 'Lists, trees, graphs, sorting algorithms, and complexity analysis.' },
     { id: cs301Id, code: 'CS301', name: 'Database Management Systems', description: 'Relational algebra, SQL, columnar storage, indexing, and ACID transactions.' },
     { id: math101Id, code: 'MATH101', name: 'Discrete Mathematics', description: 'Boolean logic, set theory, graph theory, and combinatorics.' },
+    { id: nosqlId, code: 'NOSQL', name: 'NoSQL Database Systems', description: 'Document stores, key-value caches, wide-column stores, graph databases, and CAP theorem.' },
   ];
 
   for (const s of subjects) {
@@ -222,6 +224,78 @@ export async function seedDatabase() {
         { text: 'Second Normal Form (2NF)', isCorrect: false },
         { text: 'Third Normal Form (3NF)', isCorrect: true },
         { text: 'Boyce-Codd Normal Form (BCNF)', isCorrect: false },
+      ]
+    },
+
+    // NoSQL Questions
+    {
+      subjectId: nosqlId,
+      teacherId: teacher1Id,
+      text: 'Which CAP theorem property guarantees that every non-failing node returns a response for read and write requests?',
+      difficulty: 'medium',
+      marks: 2.0,
+      explanation: 'Availability in the CAP theorem ensures every request receives a (non-error) response, without guaranteeing that it contains the most recent write.',
+      options: [
+        { text: 'Consistency', isCorrect: false },
+        { text: 'Availability', isCorrect: true },
+        { text: 'Partition tolerance', isCorrect: false },
+        { text: 'Atomicity', isCorrect: false },
+      ]
+    },
+    {
+      subjectId: nosqlId,
+      teacherId: teacher1Id,
+      text: 'Which type of NoSQL database is Neo4j classified as?',
+      difficulty: 'easy',
+      marks: 1.0,
+      explanation: 'Neo4j is a graph database designed to store and navigate nodes, relationships, and properties.',
+      options: [
+        { text: 'Document store', isCorrect: false },
+        { text: 'Graph database', isCorrect: true },
+        { text: 'Key-value cache', isCorrect: false },
+        { text: 'Wide-column store', isCorrect: false },
+      ]
+    },
+    {
+      subjectId: nosqlId,
+      teacherId: teacher1Id,
+      text: 'In document databases like MongoDB, what binary serialization format is used internally for storage and network transfer?',
+      difficulty: 'medium',
+      marks: 2.0,
+      explanation: 'BSON (Binary JSON) is a binary-encoded serialization of JSON-like documents supporting additional data types like dates and raw binary data.',
+      options: [
+        { text: 'XML', isCorrect: false },
+        { text: 'YAML', isCorrect: false },
+        { text: 'BSON', isCorrect: true },
+        { text: 'Protocol Buffers', isCorrect: false },
+      ]
+    },
+    {
+      subjectId: nosqlId,
+      teacherId: teacher1Id,
+      text: 'Which distributed NoSQL data model organizes data into keyspaces, column families, rows, and flexible columns (e.g., Apache Cassandra, HBase)?',
+      difficulty: 'medium',
+      marks: 2.0,
+      explanation: 'Wide-column (or Column-family) databases store tabular data using dynamic column families indexed by row keys.',
+      options: [
+        { text: 'Wide-column / Column-family store', isCorrect: true },
+        { text: 'Relational 3NF store', isCorrect: false },
+        { text: 'Pure Key-value store', isCorrect: false },
+        { text: 'Hierarchical XML store', isCorrect: false },
+      ]
+    },
+    {
+      subjectId: nosqlId,
+      teacherId: teacher1Id,
+      text: 'What does "Eventual Consistency" mean in distributed NoSQL systems like Amazon DynamoDB?',
+      difficulty: 'hard',
+      marks: 3.0,
+      explanation: 'Eventual consistency guarantees that, if no new updates are made to the object, all replicas will eventually return the last updated value.',
+      options: [
+        { text: 'Data becomes invalid after a fixed timeout', isCorrect: false },
+        { text: 'All replicas will eventually converge to the same value in the absence of new updates', isCorrect: true },
+        { text: 'Updates are rejected during network partitions', isCorrect: false },
+        { text: 'Data is written only once per 24 hours', isCorrect: false },
       ]
     },
 
